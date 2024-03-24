@@ -26,12 +26,12 @@ pipeline {
   -Dsonar.login=c7e04f6dd8fd34db94189caaeecb70c88da00bde"""
       }
     }
-    stage('Upload to Artifactory') {
+   /* stage('Upload to Artifactory') {
       steps {
         sh "mvn clean deploy -DskipTests"
       }
 
-    }
+    }*/
     stage('Deploy to DEV') {
       environment {
         HOSTS = "dev"
