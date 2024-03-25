@@ -27,7 +27,7 @@ pipeline {
       }
     }
     stage('Upload to Artifactory') {
-      steps {
+      //steps {
        sh "mvn clean deploy -DskipTests"
       }
 
